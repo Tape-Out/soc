@@ -11,17 +11,7 @@ bus-neutral contracts in [`hwcore`](https://github.com/Tape-Out/hwcore), assembl
 
 ## Status
 
-Planned. What sits in this repository today is the retired picorv32-era Verilog, kept for
-provenance. The Bluespec rewrite against the [`spec`](https://github.com/Tape-Out/spec)
-contracts has not landed yet, and it will not reuse this source.
-
-`mysoc32.v` is the retired top level: a picorv32 core wired to CLINT, PLIC, UART, PWM,
-GPIO, MROM, WDT and Timer. `third_party/` holds the core itself, unmodified, under its
-original ISC licence.
-
-The replacement is not another hand-written top level. Assembly becomes declarative:
-an `ip.yaml` with an `instances:` section, from which the top level is generated. See
-[`spec`](https://github.com/Tape-Out/spec).
+Planned, not started. It is meant to become the parameterised SoC generator; work starts when the skeleton shared by the reference SoCs can be pulled out. The Verilog from the picorv32 era that sits here is kept as history only; the implementation will be written from scratch in Bluespec.
 
 ## License
 
